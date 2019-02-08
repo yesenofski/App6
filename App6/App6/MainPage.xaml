@@ -4,11 +4,53 @@
              xmlns:local="clr-namespace:App6"
              x:Class="App6.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height=" *" />
+            <RowDefinition Height=" *" />
+            <RowDefinition Height=" *" />
+            <RowDefinition Height=" *" />
+            <RowDefinition Height=" *" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Button Text="0" TextColor="Gray" Font="Droid Serif" Grid.Row="4" Grid.Column="0" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Grid.ColumnSpan="3" Clicked="OnClickNum" />
+        <Button Text="C" TextColor="Black" Font="Droid Serif" Grid.Row="5" Grid.Column="0" BackgroundColor="Beige" FontSize="27"  BorderRadius="0" Clicked="AllClear" />
+        <Button Text="=" TextColor="White" Font="Droid Serif" Grid.Row="5" Grid.Column="1" BackgroundColor="Orange" FontSize="27" BorderRadius="0" Grid.ColumnSpan="3" Clicked="Calculator"  />
+
+        <Button Text="1" TextColor="Gray" Font="Driod Serif" Grid.Row="3" Grid.Column="0" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="2" TextColor="Gray" Font="Driod Serif" Grid.Row="3" Grid.Column="1" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="3" TextColor="Gray" Font="Driod Serif" Grid.Row="3" Grid.Column="2" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="4" TextColor="Gray" Font="Driod Serif" Grid.Row="2" Grid.Column="0" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="5" TextColor="Gray" Font="Driod Serif" Grid.Row="2" Grid.Column="1" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="6" TextColor="Gray" Font="Driod Serif" Grid.Row="2" Grid.Column="2" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="7" TextColor="Gray" Font="Driod Serif" Grid.Row="1" Grid.Column="0" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="8" TextColor="Gray" Font="Driod Serif" Grid.Row="1" Grid.Column="1" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+        <Button Text="9" TextColor="Gray" Font="Driod Serif" Grid.Row="1" Grid.Column="2" BackgroundColor="DarkGray" FontSize="27" BorderRadius="0" Clicked="OnClickNum" />
+
+
+        <Button Text="/" TextColor="White"  Font="Driod Serif" Grid.Row="1" Grid.Column="3" BackgroundColor="Orange" FontSize="27" BorderRadius="0" Clicked="OnClickOp"  />
+        <Button Text="X" TextColor="White"  Font="Driod Serif" Grid.Row="2" Grid.Column="3" BackgroundColor="Orange" FontSize="27" BorderRadius="0" Clicked="OnClickOp" />
+        <Button Text="-" TextColor="White"  Font="Driod Serif" Grid.Row="3" Grid.Column="3" BackgroundColor="Orange" FontSize="27" BorderRadius="0" Clicked="OnClickOp" />
+        <Button Text="+" TextColor="White"  Font="Driod Serif" Grid.Row="4" Grid.Column="3" BackgroundColor="Orange" FontSize="27" BorderRadius="0" Clicked="OnClickOp" />
+
+
+        <Label x:Name="Compute" Font="Droid Serif" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0" TextColor="White" 
+               HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+
+
+
+
+    </Grid>
+    //refences:
+    //https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/
+    //https://www.youtube.com/watch?v=-_rqzsJy_Qs          
 
 </ContentPage>
